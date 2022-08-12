@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import play from 'audio-play';
+import load from 'audio-loader';
 
 export default function MainPage() {
+  const wrongEnter = async function () {
+    const sound = await load('/sound/dontEnter.mp3');
+    play(sound);
+  };
+  const succsesEnter = async function () {
+    const sound = await load('/sound/entery.mp3');
+    play(sound);
+  };
+
   const [input, setInput] = useState('');
   const navigate = useNavigate();
 
@@ -9,8 +20,10 @@ export default function MainPage() {
     event.preventDefault();
     console.log(input);
     if (input.name === 'axios') {
+      succsesEnter();
       navigate('/choise');
     } else {
+      wrongEnter();
       alert('Вызывайте DANGON MASTERa');
     }
   };

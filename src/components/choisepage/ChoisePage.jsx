@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import play from 'audio-play';
+import load from 'audio-loader';
 
 export default function ChoisePage() {
+  const themeEnter = async function () {
+    const sound = await load('/sound/themeEnter.mp3');
+    play(sound);
+  };
   return (
     <>
       <div className="card">
@@ -10,7 +16,7 @@ export default function ChoisePage() {
         </div>
         <div className="card-body">
           <h5 className="card-title">Логично пердположить, что здесь будет куча вопросиков про мемасики, не правда ли, ребятки?)</h5>
-          <Link to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
+          <Link onClick={themeEnter} to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
         </div>
       </div>
       <br />
@@ -20,7 +26,7 @@ export default function ChoisePage() {
         </div>
         <div className="card-body">
           <h5 className="card-title">Немного обмана могут вам предложить не только цыгане и гадалки</h5>
-          <Link to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
+          <Link onClick={themeEnter} to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
         </div>
       </div>
       <br />
@@ -30,7 +36,7 @@ export default function ChoisePage() {
         </div>
         <div className="card-body">
           <h5 className="card-title">Где находится Канад`а?</h5>
-          <Link to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
+          <Link onClick={themeEnter} to="`/choise/${id}`" className="btn btn-primary">Let's go!</Link>
         </div>
       </div>
     </>
