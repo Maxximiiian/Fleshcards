@@ -10,6 +10,11 @@ export default function ChoisePage() {
     play(sound);
   };
 
+  const lieEnter = async function () {
+    const sound = await load('/sound/rick.mp3');
+    play(sound);
+  };
+
   const [allTopics, setAllTopics] = useState([]);
   useEffect(() => {
     fetch('/api/topics')
@@ -19,7 +24,7 @@ export default function ChoisePage() {
 
   return (
     <>
-      <div className="card">
+      <div className="card mt-3 pt-3">
         <div className="card-header">
           Memes
         </div>
@@ -35,7 +40,7 @@ export default function ChoisePage() {
         </div>
         <div className="card-body">
           <h5 className="card-title">Немного обмана могут вам предложить не только цыгане и гадалки</h5>
-          <Link to="/choise/2" className="btn btn-primary" onClick={themeEnter}>Let's go!</Link>
+          <Link to="/choise/2" className="btn btn-primary" onClick={lieEnter}>Let's go!</Link>
         </div>
       </div>
       <br />
