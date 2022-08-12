@@ -3,8 +3,8 @@ import morgan from 'morgan';
 import template from './template';
 // import { Hero } from './db/models';
 import indexRouter from './routes/indexRouter';
+import apiRouter from './routes/apiRouter';
 // import studentRouter from './router/studentRouter';
-// import apiRouter from './router/apiRouter';
 
 const PORT = 3000;
 const app = express();
@@ -15,6 +15,6 @@ app.use(express.json());
 
 app.use('/', indexRouter);
 // app.use('/students', studentRouter);
-// app.use('/api', apiRouter);
+app.use('/api', apiRouter);
 
 app.listen(PORT, () => console.log('A server has been launched!', PORT));

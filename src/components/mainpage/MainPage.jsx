@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import play from 'audio-play';
 import load from 'audio-loader';
+import { Navigate } from 'react-router-dom';
+
 
 export default function MainPage() {
   const wrongEnter = async function () {
@@ -14,7 +16,6 @@ export default function MainPage() {
   };
 
   const [input, setInput] = useState('');
-  const navigate = useNavigate();
 
   const submitHandler = async (event) => {
     event.preventDefault();
