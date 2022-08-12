@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import play from 'audio-play';
 import load from 'audio-loader';
-import { Navigate } from 'react-router-dom';
-
 
 export default function MainPage() {
   const wrongEnter = async function () {
@@ -16,6 +14,7 @@ export default function MainPage() {
   };
 
   const [input, setInput] = useState('');
+  const navigate = useNavigate();
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -37,7 +36,7 @@ export default function MainPage() {
     <div>
       <div className="container">
         <div className="mx-auto mt-5" style={{ width: '400px' }}>
-          {/* <div style={{ height: '250px' }} /> */}
+          <div style={{ height: '250px' }} />
           <form
             className="container bg-light rounded-3 py-3 item"
             align="center"

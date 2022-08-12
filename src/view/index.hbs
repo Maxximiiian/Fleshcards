@@ -9,7 +9,25 @@
     <script defer src="/app.js"></script>
     <script defer src="/vendor.js"></script>
     <title>Document</title>
-    
+    <style>
+        
+        body{
+            background: #000 url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612494657_32-p-mem-kachok-na-serom-fone-45.jpg); 
+            background-attachment: fixed; /* Фон страницы фиксируется */
+		    background-repeat: no-repeat; /* Изображение повторяется по горизонтали */
+            background-position: center center;
+            background-size: cover;
+            {{!-- background-size: contain; --}} /* закомменчено*/
+            
+        }
+        .item {
+            opacity: .8;
+            transition: .3s ease;
+        }
+        .item:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <div id="root">
