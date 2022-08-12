@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './navbar/Navbar';
 import MainPage from './mainpage/MainPage';
+import ChoisePage from './choisepage/ChoisePage';
 
 export default function App() {
   return (
@@ -9,7 +10,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/choise" />
+        <Route path="/choise" element={<ChoisePage />} />
         <Route path="/choise/:id" />
       </Routes>
     </div>
