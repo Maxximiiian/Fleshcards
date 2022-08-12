@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function MainPage() {
   const [input, setInput] = useState('');
+  const navigate = useNavigate();
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    console.log('ugbuygbuybbh');
+    console.log(input);
+    if (input.name === 'axios') {
+      navigate('/choise');
+    } else {
+      alert('Вызывайте DANGON MASTERa');
+    }
   };
 
   const changeHandler = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    console.log(input);
   };
 
   return (
