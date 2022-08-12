@@ -15,9 +15,7 @@ export default function Navbar() {
     <nav className="navbar navbar-light bg-light rounded-3 item">
       <h2 className="text-dark my-auto mx-3">Welcome to MeMeLaNd!</h2>
       <NavLink onClick={playHandler} to="/" className="btn btn-secondary my-auto align-self-right mx-3">Главная</NavLink>
-      <NavLink onClick={playHandler} to="/" className="btn btn-secondary my-auto align-self-right mx-3">Че нибудь</NavLink>
-      <NavLink onClick={playHandler} to="/" className="btn btn-secondary my-auto align-self-right mx-3">Че нибудь</NavLink>
-      <button onClick={playHandler} className="btn btn-secondary my-auto align-self-right mx-3">PRESS</button>
+      <NavLink onClick={playHandler} to="/choise" className="btn btn-secondary my-auto align-self-right mx-3">Иллюзия выбора</NavLink>
     </nav>
   );
 }
